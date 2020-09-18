@@ -1,7 +1,7 @@
 ---
-title: 'By Country: Pure Clusters'
 output: html_document
 ---
+
 ```{r include=F}
 knitr::opts_chunk$set(echo=F)
 knitr::opts_chunk$set(warning=F)
@@ -33,6 +33,7 @@ file_list_pure = readRDS("~/centauri/conjunction_analysis/pureRDSfiles/file_list
 today = toupper(strftime(Sys.Date(), format="%d%b%Y")) # current day
 path = "~conjunction_analysis/conj_data/"
 all_conjs_expanded_pure = readRDS("~/centauri/conjunction_analysis/pureRDSfiles/all_conjs_expanded_pure")
+
 ```
 
 ```{r perc_encounters_country, fig.width=7.5}
@@ -71,7 +72,7 @@ ggplot() +
   theme_minimal() +
   scale_y_continuous(labels = scales::percent) + 
   scale_fill_brewer(palette = "Set1")+
-  labs(x="Cluster",y="", title = "Percent of Encounters by Country - misses within 5 km", fill="Country",
+  labs(x="Cluster",y="", title="Percent of Encounters by Country - misses within 5 km", fill="Country",
        subtitle="Number of encounters shown above each bar", caption=paste0("Encounters from 31MAR2016-", today))
 ```
 
