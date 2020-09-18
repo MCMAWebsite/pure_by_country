@@ -7,7 +7,12 @@ knitr::opts_chunk$set(echo=F)
 knitr::opts_chunk$set(warning=F)
 knitr::opts_chunk$set(message=F)
 
-setwd("~/centauri/")
+print("In pure_by_country/pure_by_country.Rmd")
+
+install.packages("tidyverse", repos="http://cran.us.r-project.org")
+install.packages("kableExtra", repos="http://cran.us.r-project.org")
+install.packages("DT", repos="http://cran.us.r-project.org")
+
 library(tidyverse)
 library(readr)
 library(kableExtra)
@@ -18,6 +23,7 @@ library(RColorBrewer)
 library(stringr)
 library(scales)
 Sys.setenv(TZ='EST')
+
 mcma_objs = readRDS("~/centauri/conjunction_analysis/RDSfiles/mcma_objs")
 all_conjs_pure = readRDS("~/centauri/conjunction_analysis/pureRDSfiles/all_conjs_pure")
 derelicts = readRDS("~/centauri/conjunction_analysis/RDSfiles/derelicts")
