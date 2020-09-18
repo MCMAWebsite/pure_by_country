@@ -1,1 +1,3 @@
 # pure_by_country
+
+I'm not sure where the ~/centauri path is...
